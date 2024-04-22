@@ -1,0 +1,21 @@
+# 1. Write a Python program to calculate the length of a string.
+def calculate_string_length(string):
+    return len(string)
+input_string = input("Enter a string: ")
+length = calculate_string_length(input_string)
+print("Length of the string is:", length)
+
+# 2, Write a Python program to count the number of characters (character frequency) in a string.
+def count_character_frequency(string):
+    frequency = {}
+    for char in string:
+        if char in frequency:
+            frequency[char] += 1
+        else:
+            frequency[char] = 1
+    return frequency
+input_string = input("Enter a string: ")
+character_frequency = count_character_frequency(input_string)
+print("Character frequency in the string:")
+for char, freq in character_frequency.items():
+    print(f"{char}: {freq}")
