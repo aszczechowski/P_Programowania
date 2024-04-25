@@ -15,15 +15,20 @@ else:
     print(f"The key {key_to_check} does not exist in the dictionary.")
 
 
-# 3. Write a Python script to check whether a given key already exists in a dictionary.
-def check_key_exists(dictionary, key):
-    return key in dictionary
-sample_dict = {0: 160, 1: 20, 21: 310}
-key_to_check = 1
-if check_key_exists(sample_dict, key_to_check):
-    print(f"The key {key_to_check} exists in the dictionary.")
-else:
-    print(f"The key {key_to_check} does not exist in the dictionary.")
+# 3. Write a Python script to sort (ascending and descending) a dictionary by value.
+def sort_dict_ascending(input_dict):
+    return dict(sorted(input_dict.items(), key=lambda item: item[1]))
+
+def sort_dict_descending(input_dict):
+    return dict(sorted(input_dict.items(), key=lambda item: item[1], reverse=True))
+
+sample_dict = {'a': 3, 'b': 1, 'c': 2}
+
+sorted_dict_asc = sort_dict_ascending(sample_dict)
+print("Sorted Dictionary (Ascending):", sorted_dict_asc)
+
+sorted_dict_desc = sort_dict_descending(sample_dict)
+print("Sorted Dictionary (Descending):", sorted_dict_desc)
 
 
 # 4. Write a Python script to merge two Python dictionaries.
@@ -89,7 +94,7 @@ values_list = [1, 2, 3]
 
 mapped_dict = map_lists_to_dictionary(keys_list, values_list)
 
-print("Mapped dictionary:", mapped_dict
+print("Mapped dictionary:", mapped_dict)
 
 
 # 9. Write a Python program to sort a given dictionary by key.
@@ -197,11 +202,10 @@ my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 6}
 print("Length of the dictionary:", dictionary_length(my_dict))
 
 
-# 18.  Write a Python program to count the frequency of a dictionary.
-Original Dictionary:
-{'V': 10, 'VI': 10, 'VII': 40, 'VIII': 20, 'IX': 70, 'X': 80, 'XI': 40, 'XII': 20}
-Count the frequency of the said dictionary:
-Counter({10: 2, 40: 2, 20: 2, 70: 1, 80: 1})
+# 18.  Write a Python program to count the frequency of a dictionary. Original Dictionary:
+#{'V': 10, 'VI': 10, 'VII': 40, 'VIII': 20, 'IX': 70, 'X': 80, 'XI': 40, 'XII': 20}
+#Count the frequency of the said dictionary:
+#Counter({10: 2, 40: 2, 20: 2, 70: 1, 80: 1})
 from collections import Counter
 
 def count_frequency(dictionary):
@@ -215,8 +219,8 @@ print(frequency)
 
 
 # 19. Write a Python program to invert a dictionary with unique hashable values.
-Sample Output:
-{10: 'Theodore', 11: 'Mathew', 9: 'Roxanne'}
+# Sample Output:
+# {10: 'Theodore', 11: 'Mathew', 9: 'Roxanne'}
 def invert_dictionary(dictionary):
     inverted_dict = {value: key for key, value in dictionary.items()}
     return inverted_dict
@@ -228,15 +232,14 @@ print("Inverted dictionary:")
 print(inverted_dict)
 
 
-# 20. Write a Python program to find the specified number of maximum values in a given dictionary.
-Original Dictionary:
-{'a': 5, 'b': 14, 'c': 32, 'd': 35, 'e': 24, 'f': 100, 'g': 57, 'h': 8, 'i': 100}
-1 maximum value(s) in the said dictionary:
-['f']
-2 maximum value(s) in the said dictionary:
-['f', 'i']
-5 maximum value(s) in the said dictionary:
-['f', 'i', 'g', 'd', 'c']
+# 20. Write a Python program to find the specified number of maximum values in a given dictionary. Original Dictionary:
+#{'a': 5, 'b': 14, 'c': 32, 'd': 35, 'e': 24, 'f': 100, 'g': 57, 'h': 8, 'i': 100}
+#1 maximum value(s) in the said dictionary:
+#['f']
+#2 maximum value(s) in the said dictionary:
+#['f', 'i']
+#5 maximum value(s) in the said dictionary:
+#['f', 'i', 'g', 'd', 'c']
 
 def find_max_values(dictionary, num_max):
     sorted_items = sorted(dictionary.items(), key=lambda x: x[1], reverse=True)
