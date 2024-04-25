@@ -22,8 +22,7 @@ for char, freq in character_frequency.items():
     print(f"{char}: {freq}")
 
 
-# 3. Write a Python program to get a string made of the first 2 and last 2 characters of a given string.
- If the string length is less than 2, return the empty string instead.
+# 3. Write a Python program to get a string made of the first 2 and last 2 characters of a given string. If the string length is less than 2, return the empty string instead.
 def get_first_and_last_two_chars(string):
     if len(string) < 2:
         return ""
@@ -34,8 +33,7 @@ result = get_first_and_last_two_chars(input_string)
 print("Result:", result)
 
 
-# 4. Write a Python program to get a string from a given string 
-where all occurrences of its first char have been changed to '$', except the first char itself.
+# 4. Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself.
 def change_first_char_occurrences(string):
     if len(string) < 2:
         return string
@@ -48,8 +46,7 @@ result = change_first_char_occurrences(input_string)
 print("Result:", result)
 
 
-# 5. Write a Python program to get a single string from two given strings,
- separated by a space and swap the first two characters of each string.
+# 5. Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each string.
 def swap_first_two_chars(str1, str2):
     new_str1 = str2[:2] + str1[2:]
     new_str2 = str1[:2] + str2[2:]
@@ -60,9 +57,7 @@ result = swap_first_two_chars(input_str1, input_str2)
 print("Result:", result)
 
 
-# 6. Write a Python program to add 'ing' at the end of a given string (length should be at least 3).
-If the given string already ends with 'ing', add 'ly' instead.
-If the string length of the given string is less than 3, leave it unchanged.
+# 6. Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing', add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged.
 def modify_string(string):
     if len(string) < 3:
         return string
@@ -75,8 +70,7 @@ result = modify_string(input_string)
 print("Result:", result)
 
 
-# 7. Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string.
-If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
+# 7. Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string. If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
 def replace_not_poor(string):
     not_index = string.find('not')
     poor_index = string.find('poor')
@@ -98,7 +92,7 @@ def find_longest_word(words):
     longest_word = max(words, key=len)
     length_of_longest_word = len(longest_word)
     return longest_word, length_of_longest_word
-word_list = ["apple", "banana", "orange", "strawberry", "kiwi"]
+word_list = input("Enter words separated by spaces: ").split()
 longest_word, length_of_longest_word = find_longest_word(word_list)
 print("Longest word:", longest_word)
 print("Length of the longest word:", length_of_longest_word)
