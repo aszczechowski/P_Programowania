@@ -11,11 +11,10 @@ print("Numbers divisible by 7 and multiples of 5 between 1500 and 2700:")
 print(divisible_by_7_and_multiple_of_5)
 
 
-# 2.  Write a Python program to convert temperatures to and from Celsius and Fahrenheit.
-[ Formula : c/5 = f-32/9 [ where c = temperature in celsius and f = temperature in fahrenheit ]
-Expected Output :
-60°C is 140 in Fahrenheit
-45°F is 7 in Celsius
+# 2.  Write a Python program to convert temperatures to and from Celsius and Fahrenheit. [ Formula : c/5 = f-32/9 [ where c = temperature in celsius and f = temperature in fahrenheit ]
+# Expected Output :
+# 60°C is 140 in Fahrenheit
+# 45°F is 7 in Celsius
 
 def celsius_to_fahrenheit(celsius):
     fahrenheit = (celsius * 9/5) + 32
@@ -25,18 +24,17 @@ def fahrenheit_to_celsius(fahrenheit):
     celsius = (fahrenheit - 32) * 5/9
     return celsius
 
-celsius_temp = 60
-fahrenheit_temp = 45
-
+celsius_temp = float(input("Enter the temperature in Celsius: "))
 fahrenheit_result = celsius_to_fahrenheit(celsius_temp)
 print(f"{celsius_temp}°C is {fahrenheit_result} in Fahrenheit")
 
+fahrenheit_temp = float(input("Enter the temperature in Fahrenheit: "))
 celsius_result = fahrenheit_to_celsius(fahrenheit_temp)
 print(f"{fahrenheit_temp}°F is {celsius_result} in Celsius")
 
 
 # 3. Write a Python program to guess a number between 1 and 9.
-Note : User is prompted to enter a guess. If the user guesses wrong then the prompt appears again until the guess is correct, on successful guess, user will get a "Well guessed!" message, and the program will exit.
+# Note : User is prompted to enter a guess. If the user guesses wrong then the prompt appears again until the guess is correct, on successful guess, user will get a "Well guessed!" message, and the program will exit.
 import random
 
 def guess_number():
@@ -88,17 +86,7 @@ print("Reversed word:", reversed_word)
 
 
 # 6. Write a Python program to print the alphabet pattern 'A'.
-Expected Output:
 
-  ***                                                                   
- *   *                                                                  
- *   *                                                                  
- *****                                                                  
- *   *                                                                  
- *   *                                                                  
- *   *
-
-Expected Output:
 def print_alphabet_A():
     print("  ***  ")
     print(" *   * ")
@@ -112,15 +100,7 @@ print_alphabet_A()
 
 
 # 7. Write a Python program to print the alphabet pattern 'D'.
-Expected Output:
 
- ****                                                                   
- *   *                                                                  
- *   *                                                                  
- *   *                                                                  
- *   *                                                                  
- *   *                                                                  
- **** 
 def print_alphabet_D():
     print(" **** ")
     print(" *   *")
@@ -134,15 +114,7 @@ print_alphabet_D()
 
 
 # 8. Write a Python program to print the alphabet pattern 'E'.
-Expected Output:
 
- *****                                                                  
- *                                                                      
- *                                                                      
- ****                                                                   
- *                                                                      
- *                                                                      
- *****
 def print_alphabet_E():
     print(" ***** ")
     print(" *     ")
@@ -152,20 +124,11 @@ def print_alphabet_E():
     print(" *     ")
     print(" ***** ")
 
-# Call the function to print the pattern
 print_alphabet_E()
 
 
 # 9. Write a Python program to print the alphabet pattern 'G'.
-Expected Output:
-
-  ***                                                                   
- *   *                                                                  
- *                                                                      
- * ***                                                                  
- *   *                                                                  
- *   *                                                                  
-  *** 
+ 
 def print_alphabet_G():
     print("  ***  ")
     print(" *   * ")
@@ -179,15 +142,7 @@ print_alphabet_G()
 
 
 # 10. Write a Python program to print the alphabet pattern 'L'.
-Expected Output:
 
- *                                                                      
- *                                                                      
- *                                                                      
- *                                                                      
- *                                                                      
- *                                                                      
- *****
 def print_alphabet_L():
     print(" *      ")
     print(" *      ")
@@ -201,15 +156,7 @@ print_alphabet_L()
 
 
 # 11. Write a Python program to print the alphabet pattern 'M'.
-Expected Output:
-
-  *       *                                                             
-  *       *                                                             
-  * *   * *                                                             
-  *   *   *                                                             
-  *       *                                                             
-  *       *                                                             
-  *       *
+ 
 def print_alphabet_M():
     print("  *       *  ")
     print("  *       *  ")
@@ -223,15 +170,7 @@ print_alphabet_M()
 
 
 # 12. Write a Python program to print the alphabet pattern 'O'.
-Expected Output:
-
-  ***                                                                   
- *   *                                                                  
- *   *                                                                  
- *   *                                                                  
- *   *                                                                  
- *   *                                                                  
-  *** 
+  
 def print_alphabet_O():
     print("  ***  ")
     print(" *   * ")
@@ -245,15 +184,7 @@ print_alphabet_O()
 
 
 # 13. Write a Python program to print the alphabet pattern 'P'.
-Expected Output:
 
- ****                                                                   
- *   *                                                                  
- *   *                                                                  
- ****                                                                   
- *                                                                      
- *                                                                      
- *  
 def print_alphabet_P():
     print("****  ")
     print("*   * ")
@@ -263,20 +194,11 @@ def print_alphabet_P():
     print("*     ")
     print("*     ")
 
-# Call the function to print the pattern
 print_alphabet_P()
 
 
 # 14. Write a Python program to print the alphabet pattern 'R'.
-Expected Output:
 
- ****                                                                   
- *   *                                                                  
- *   *                                                                  
- ****                                                                   
- * *                                                                    
- *  *                                                                   
- *   *
 def print_alphabet_R():
     print("****  ")
     print("*   * ")
@@ -290,16 +212,9 @@ print_alphabet_R()
 
 
 # 15. Write a Python program to print the alphabet pattern 'T'.
-Expected Output:
- *****                                                                  
-   *                                                                    
-   *                                                                    
-   *                                                                    
-   *                                                                    
-   *                                                                    
-   *  
+
 def print_alphabet_T():
-    print("*****  ")
+    print("*******")
     print("   *   ")
     print("   *   ")
     print("   *   ")
@@ -311,15 +226,7 @@ print_alphabet_T()
 
 
 # 16. Write a Python program to print the alphabet pattern 'U'.
-Expected Output:
-
- *   *                                                                  
- *   *                                                                  
- *   *                                                                  
- *   *                                                                  
- *   *                                                                  
- *   *                                                                  
-  *** 
+                                                                   
 def print_alphabet_U():
     print("*   * ")
     print("*   * ")
@@ -329,20 +236,11 @@ def print_alphabet_U():
     print("*   * ")
     print(" ***  ")
 
-# Call the function to print the pattern
 print_alphabet_U()
 
 
 # 17. Write a Python program to print the alphabet pattern 'X'.
-Expected Output:
 
- *   *                                                                  
- *   *                                                                  
-  * *                                                                   
-   *                                                                    
-  * *                                                                   
- *   *                                                                  
- *   *
 def print_alphabet_X():
     print("*   * ")
     print("*   * ")
@@ -356,15 +254,7 @@ print_alphabet_X()
 
 
 # 18. Write a Python program to print the alphabet pattern 'Z'.
-Expected Output:
 
-*******                                                                 
-     *                                                                  
-    *                                                                   
-   *                                                                    
-  *                                                                     
- *                                                                      
-*******
 def print_alphabet_Z():
     print("*******")
     print("     * ")
