@@ -1,0 +1,41 @@
+import string
+from collections import Counter
+
+def count_letters(text):
+    letters = sum(c.isalpha() for c in text)
+    return letters
+
+def count_words(text):
+    words = text.split()
+    return len(words)
+
+def count_sentences(text):
+    sentences = text.split('.')
+    return len(sentences) - 1
+
+def word_frequency(text):
+    words = text.lower().translate(str.maketrans('', '', string.punctuation)).split()
+    return Counter(words)
+
+def analyze_text(text):
+    num_letters = count_letters(text)
+    num_words = count_words(text)
+    num_sentences = count_sentences(text)
+    word_freq = word_frequency(text)
+    
+    return num_letters, num_words, num_sentences, word_freq
+
+def main():
+    text = input("Wprowadź tekst do analizy: ")
+
+    num_letters, num_words, num_sentences, word_freq = analyze_text(text)
+
+    print(f"Liczba liter: {num_letters}")
+    print(f"Liczba słów: {num_words}")
+    print(f"Liczba zdań: {num_sentences}")
+    print(f"Częstotliwość występowania słów:")
+    for word, freq in word_freq.most_common():
+        print(f"{word}: {freq}")
+
+if __name__ == "__main__":
+    main()
